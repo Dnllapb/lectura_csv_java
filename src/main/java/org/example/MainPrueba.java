@@ -20,8 +20,9 @@ public class MainPrueba {
        List <Product> productList = productService.getProductList();
 
         try {
-        //3.
+        //3.Instanciamos las clases de la libreria en la primera pasamaos la ruta donde tenemos el archivo csv
             FileReader fileReader = new FileReader("C:\\Users\\danie\\IdeaProjects\\lectura_csv_java\\resources\\inventory.csv");
+            //4. La clase CSV Parser se utiliza para analizar un archivo CSV en filas y columnas de datos. Permite leer y procesar los datos del archivo CSV.
             CSVParser csvParser = new CSVParser(fileReader, CSVFormat.DEFAULT);
 
             boolean primeraFila = true; // Flag para detectar la primera fila (encabezados)
@@ -30,7 +31,7 @@ public class MainPrueba {
                 if (primeraFila ) {//NO PERMITE TOMAR LOS ENCABEZADOS DEL EXCEL
                     // Si es la primera fila, omitirla
                     primeraFila  = false;
-                    continue;
+                    continue;//se utiliza para saltar esa fila y avanzar a la siguiente fila de datos.
                 }
 
                 int codigo = Integer.parseInt(csvRecord.get(0));

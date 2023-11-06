@@ -1,13 +1,11 @@
 package org.example.Service;
 
 import org.example.Model.Product;
-import org.example.Model.RemoveToString;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.Scanner;
 
 
@@ -71,8 +69,8 @@ public class productService implements IProductservices {
                     String url = campos[6].trim();
                     Product producto = new Product(code, nombre, descripcion, categoria, etiqueta, precio, url);
                     productList.add(producto);
-                    RemoveToString remove = new RemoveToString(code, nombre, descripcion, categoria, etiqueta, precio, url);
-                    System.out.println(remove);
+
+                    System.out.println(producto.toString());
                 }
             }
             scanner.close();

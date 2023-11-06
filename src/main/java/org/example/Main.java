@@ -1,4 +1,4 @@
-/*
+
 package org.example;
 
 
@@ -9,8 +9,13 @@ public class Main {
     public static void main(String[] args) {
         productService productServic = new productService();
         Scanner sc= new Scanner(System.in);
-        // Cargar productos desde un archivo CSV
-        System.out.println("Seleciona por favor que va realizar \n1.Ver Productos\n2.Añadir\n3.Consultar ");
+
+        String  menu = """
+                Digita la opcion que deseas realizar
+                1.Consultar productos
+                2.Agregar Producto
+                """;
+        System.out.println(menu);
 
         int seleccion = 0;
         while (seleccion!=3) {
@@ -18,9 +23,9 @@ public class Main {
             switch (seleccion) {
 
                 case 1-> productServic.cargarProductosDesdeCSV("C:\\Users\\danie\\IdeaProjects\\lectura_csv_java\\resources\\inventory.csv");
-                case 2-> productServic.add();
-                case 3-> productServic.remove();
+                case 2-> productServic.agregarProducto();
+
             }
         }
     }
-}*/
+}

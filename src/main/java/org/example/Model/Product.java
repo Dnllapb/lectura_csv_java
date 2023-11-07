@@ -54,6 +54,7 @@ public class Product {
     }
 
     @Override
+    //Anulando el to string original y dandole formato a los datos que salgan por consola
     public String toString() {
         return String.format("%-10s|%-60s | %-25s | %-20s | %-20s | %-10.2f | %s", getCode(), getName(), getDescription(), getCategory(), getLabel(), getPrice(), getUrl());
     }

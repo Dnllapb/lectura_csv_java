@@ -13,7 +13,7 @@ public class MainPrueba {
 
     public static void main(String[] args)
     {
-       //1. Instanciar la clase productServicetos para poder llamar la lista
+       //1. Instanciar la clase productServicet para poder llamar la lista
        productService productService = new productService();
        //2.Obtener la lista de productos que se encuentra en el objeto productService
        List <Product> productList = productService.getProductList();
@@ -32,7 +32,6 @@ public class MainPrueba {
                     primeraFila  = false;
                     continue;//se utiliza para saltar esa fila y avanzar a la siguiente fila de datos.
                 }
-
                 int codigo = Integer.parseInt(csvRecord.get(0));
                 String nombre = csvRecord.get(1);
                 String descripcion = csvRecord.get(2);
